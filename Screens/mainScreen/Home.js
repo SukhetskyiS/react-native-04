@@ -17,10 +17,14 @@ const MainTab = createBottomTabNavigator();
 const Home = ({ navigation }) => {
   return (
     <MainTab.Navigator
-      screenOptions={{ tabBarShowLabel: false }}
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarStyle: { position: "absolute" },
+      }}
     >
       <MainTab.Screen
         options={{
+          tabBarIconStyle: { marginLeft: 90 },
           title: "Публикации",
           headerStyle: {
             borderBottomWidth: 1,
@@ -83,6 +87,7 @@ const Home = ({ navigation }) => {
         name="Profile"
         component={ProfileScreen}
         options={{
+          tabBarIconStyle: { marginRight: 90 },
           tabBarIcon: ({ color }) => (
             <Feather name="user" size={24} color={color} />
           ),
