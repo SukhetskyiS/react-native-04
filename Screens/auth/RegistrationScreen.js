@@ -31,7 +31,6 @@ export const RegistrationScreen = ({ navigation }) => {
     Keyboard.dismiss();
     console.log(state);
     setState(initialState);
-    navigation.navigate("Home");
   };
 
   const onFocus = (data) => {
@@ -164,7 +163,7 @@ export const RegistrationScreen = ({ navigation }) => {
               <TouchableOpacity
                 style={styles.button}
                 activeOpacity={0.7}
-                onPress={keyboardHide}
+                onPress={() => navigation.navigate("Home")}
               >
                 <Text style={styles.buttonText}>
                   Зарегистрироваться
