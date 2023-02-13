@@ -48,9 +48,7 @@ const Home = ({ navigation }) => {
               size={24}
               color="#BDBDBD"
               style={{ marginRight: 16 }}
-              onPress={() =>
-                navigation.navigate("Register")
-              }
+              onPress={() => navigation.navigate("Login")}
             />
           ),
         }}
